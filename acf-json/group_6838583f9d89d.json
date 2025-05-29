@@ -1,0 +1,364 @@
+{
+    "key": "group_6838583f9d89d",
+    "title": "Booking Properties",
+    "fields": [
+        {
+            "key": "field_banner_property_details",
+            "label": "<span style=\"font-size:1.5rem;color:#E8B45C;\">Section - Property Details</span>",
+            "name": "banner_property_details",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Enter the basic details about your property.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_property_description",
+            "label": "Property Description",
+            "name": "property_description",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Luxurious and modern property perfect for your next getaway. This stunning accommodation offers comfort and style in a prime location.",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_property_location",
+            "label": "Location",
+            "name": "property_location",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Miami Beach, Florida",
+            "placeholder": "e.g., 123 Ocean Drive, Miami Beach, FL 33139",
+            "maxlength": ""
+        },
+        {
+            "key": "field_property_bedrooms",
+            "label": "Bedrooms",
+            "name": "property_bedrooms",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "placeholder": "2",
+            "min": 0
+        },
+        {
+            "key": "field_property_bathrooms",
+            "label": "Bathrooms",
+            "name": "property_bathrooms",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "placeholder": "2",
+            "min": 0
+        },
+        {
+            "key": "field_guest_capacity",
+            "label": "Guest Capacity",
+            "name": "guest_capacity",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "placeholder": "4",
+            "min": 1
+        },
+        {
+            "key": "field_nightly_rate",
+            "label": "Nightly Rate",
+            "name": "nightly_rate",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 150,
+            "placeholder": "150",
+            "min": 0
+        },
+        {
+            "key": "field_cost_per_night",
+            "label": "Cost per night",
+            "name": "cost_per_night",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 180,
+            "placeholder": "180",
+            "min": 0
+        },
+        {
+            "key": "field_check_in_time",
+            "label": "Check-In Time",
+            "name": "check_in_time",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "g:i a",
+            "return_format": "g:i a",
+            "default_value": "15:00",
+            "placeholder": "3:00 pm"
+        },
+        {
+            "key": "field_check_out_time",
+            "label": "Check-Out Time",
+            "name": "check_out_time",
+            "type": "time_picker",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "g:i a",
+            "return_format": "g:i a",
+            "default_value": "11:00",
+            "placeholder": "11:00 am"
+        },
+        {
+            "key": "field_property_airbnb_link",
+            "label": "Airbnb Link",
+            "name": "property_airbnb_link",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https://www.airbnb.com/rooms/",
+            "placeholder": "https://www.airbnb.com/rooms/your-listing-id"
+        },
+        {
+            "key": "field_banner_property_photos",
+            "label": "<span style=\"font-size:1.5rem;color:#E8B45C;\">Section - Property Photos</span>",
+            "name": "banner_property_photos",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "First 4 photos are required. Additional photos are optional.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_booking_property_image_1",
+            "label": "Property Photo 1",
+            "name": "booking_property_image_1",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_2",
+            "label": "Property Photo 2",
+            "name": "booking_property_image_2",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_3",
+            "label": "Property Photo 3",
+            "name": "booking_property_image_3",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_4",
+            "label": "Property Photo 4",
+            "name": "booking_property_image_4",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_5",
+            "label": "Property Photo 5",
+            "name": "booking_property_image_5",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_6",
+            "label": "Property Photo 6",
+            "name": "booking_property_image_6",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_7",
+            "label": "Property Photo 7",
+            "name": "booking_property_image_7",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        },
+        {
+            "key": "field_booking_property_image_8",
+            "label": "Property Photo 8",
+            "name": "booking_property_image_8",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg,jpeg,png"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "booking_properties"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1748523082
+}

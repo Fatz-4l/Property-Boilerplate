@@ -1,0 +1,529 @@
+{
+    "key": "group_6835de3d58cd6",
+    "title": "Investment Deals",
+    "fields": [
+        {
+            "key": "field_6835de3d808d0",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span style=\"font-size:1.5rem;color:#E8B45C;\">Section - Investment Details<\/span>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6835de3d808d1",
+            "label": "Investment Description",
+            "name": "investment_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Provide a detailed description of the investment opportunity",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "This property investment opportunity offers [describe key features]. Located in [location], it presents [main benefits]. The property features [key amenities\/specifications] and has potential for [growth\/returns]. Current market analysis suggests [market conditions\/trends].",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "Enter a comprehensive description of the investment opportunity, including key features, location benefits, and potential returns.",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_6835de3d808d2",
+            "label": "Investment Amount",
+            "name": "investment_amount",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the total investment amount required",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808d3",
+            "label": "Expected Return \/ ROI",
+            "name": "expected_roi",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the expected return on investment",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "e.g., 8% per annum",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808d4",
+            "label": "Type of Property",
+            "name": "property_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Select the type of property investment",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Flats \/ Apartments": "Flats \/ Apartments",
+                "House": "House",
+                "Buy to let": "Buy to let",
+                "Commercial": "Commercial",
+                "HMO": "HMO",
+                "Serviced Accommodation": "Serviced Accommodation"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_6835de3d808d6",
+            "label": "Potential Rate of Occupancy",
+            "name": "occupancy_rate",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the potential occupancy rate percentage",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 85,
+            "min": 0,
+            "max": 100,
+            "placeholder": "e.g., 85% - Based on local market research",
+            "step": 1,
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808d7",
+            "label": "Area",
+            "name": "area",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter the location\/area of the property",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33.33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "e.g., Manchester City Centre - M1, Near [landmark\/amenities]",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808d9",
+            "label": "Number of Bedrooms",
+            "name": "number_of_bedrooms",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the number of bedrooms",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6835de3d808d4",
+                        "operator": "==",
+                        "value": "house"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6835de3d808d4",
+                        "operator": "==",
+                        "value": "btl"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "placeholder": "",
+            "step": 1,
+            "max": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808da",
+            "label": "Number of Bathrooms",
+            "name": "number_of_bathrooms",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the number of bathrooms",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6835de3d808d4",
+                        "operator": "==",
+                        "value": "house"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6835de3d808d4",
+                        "operator": "==",
+                        "value": "btl"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "placeholder": "",
+            "step": 1,
+            "max": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808d8",
+            "label": "Number of Tenants",
+            "name": "number_of_tenants",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the number of tenants for this HMO property",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6835de3d808d4",
+                        "operator": "==",
+                        "value": "hmo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": 1,
+            "placeholder": "",
+            "step": 1,
+            "max": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808d5",
+            "label": "Nightly Rate",
+            "name": "nightly_rate",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Enter the nightly rate (for Serviced Accommodation)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6835de3d808d4",
+                        "operator": "==",
+                        "value": "sa"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "min": "",
+            "max": "",
+            "placeholder": "",
+            "step": "0.01",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6835de3d808e0",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "<span style=\"font-size:1.5rem;color:#E8B45C;\">Section - Investment Deal Images<\/span>",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_6835de3d808e1",
+            "label": "Investment Deal Image 1",
+            "name": "investment_deal_image_1",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the first image (Required)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e2",
+            "label": "Investment Deal Image 2",
+            "name": "investment_deal_image_2",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the second image (Required)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e3",
+            "label": "Investment Deal Image 3",
+            "name": "investment_deal_image_3",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the third image (Required)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e4",
+            "label": "Investment Deal Image 4",
+            "name": "investment_deal_image_4",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload the fourth image (Required)",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e5",
+            "label": "Investment Deal Image 5",
+            "name": "investment_deal_image_5",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload additional image (Optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e6",
+            "label": "Investment Deal Image 6",
+            "name": "investment_deal_image_6",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload additional image (Optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e7",
+            "label": "Investment Deal Image 7",
+            "name": "investment_deal_image_7",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload additional image (Optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        },
+        {
+            "key": "field_6835de3d808e8",
+            "label": "Investment Deal Image 8",
+            "name": "investment_deal_image_8",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Upload additional image (Optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "jpg, jpeg, png",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "investment_deals"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1748538781
+}
