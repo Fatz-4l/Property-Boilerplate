@@ -347,8 +347,8 @@ function add_custom_admin_styles() {
             display: none !important;
         }
 
-        /* Hide Property Management in left sidebar */
-        #adminmenu li.menu-top.menu-top-first {
+        /* Hide Property Management in left sidebar but keep Appearance visible */
+        #adminmenu li.menu-top.menu-top-first:not(#menu-appearance):not(#menu-settings):not(#menu-tools):not([class*="menu-appearance"]) {
             display: none !important;
         }
     </style>
@@ -420,9 +420,9 @@ function add_sidebar_toggle_script() {
     $display_post_type = ucwords(str_replace('_', ' ', $current_post_type));
     ?>
     <style>
-        /* Hide sidebar by default */
-        #adminmenuwrap, 
-        #adminmenuback {
+        /* Hide sidebar by default except for specific menu items */
+        #adminmenuwrap:not(.force-show), 
+        #adminmenuback:not(.force-show) {
             display: none !important;
         }
         
@@ -438,6 +438,50 @@ function add_sidebar_toggle_script() {
         body.show-sidebar #adminmenuwrap,
         body.show-sidebar #adminmenuback {
             display: block !important;
+        }
+
+        /* Reset Appearance menu styles to WordPress defaults */
+        body.show-sidebar #adminmenu #menu-appearance {
+            display: block !important;
+            position: relative !important;
+        }
+
+        body.show-sidebar #adminmenu #menu-appearance > a.menu-top {
+            display: block !important;
+            position: relative !important;
+            padding: 5px 0 !important;
+        }
+
+        body.show-sidebar #adminmenu #menu-appearance .wp-submenu {
+            display: none !important;
+            position: absolute !important;
+            top: -1000em !important;
+            left: 160px !important;
+            margin-top: 0 !important;
+            padding: 7px 0 8px !important;
+            z-index: 9999 !important;
+            background-color: #2c3338 !important;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2) !important;
+        }
+
+        body.show-sidebar #adminmenu #menu-appearance.opensub .wp-submenu,
+        body.show-sidebar #adminmenu #menu-appearance.wp-has-current-submenu .wp-submenu {
+            display: block !important;
+            top: 0 !important;
+        }
+
+        body.show-sidebar #adminmenu #menu-appearance .wp-submenu li {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        body.show-sidebar #adminmenu #menu-appearance .wp-submenu a {
+            padding: 5px 12px !important;
+        }
+
+        /* Only hide Property Management in left sidebar */
+        #adminmenu li.menu-top.menu-top-first:not(#menu-appearance):not(#menu-settings):not(#menu-tools) {
+            display: none !important;
         }
 
         body.show-sidebar #wpcontent,
@@ -591,6 +635,21 @@ function add_sidebar_toggle_script() {
             const correctPassword = '42069';
             let sidebarVisible = false;
 
+            // Function to ensure Appearance menu behaves correctly
+            function setupAppearanceMenu() {
+                if (document.body.classList.contains('show-sidebar')) {
+                    const appearanceMenu = document.querySelector('#menu-appearance');
+                    if (appearanceMenu) {
+                        // Remove any inline styles that might interfere
+                        appearanceMenu.style = '';
+                        appearanceMenu.querySelector('.wp-submenu').style = '';
+                        appearanceMenu.querySelectorAll('.wp-submenu li').forEach(item => {
+                            item.style = '';
+                        });
+                    }
+                }
+            }
+
             // Check localStorage for sidebar state
             if (localStorage.getItem('sidebarVisible') === 'true') {
                 document.body.classList.add('show-sidebar');
@@ -598,6 +657,7 @@ function add_sidebar_toggle_script() {
                 if (toggleButton) {
                     toggleButton.textContent = 'Hide Advanced Settings';
                 }
+                setupAppearanceMenu();
             }
 
             if (toggleButton) {
@@ -630,6 +690,7 @@ function add_sidebar_toggle_script() {
                     toggleButton.textContent = 'Hide Advanced Settings';
                 }
                 localStorage.setItem('sidebarVisible', 'true');
+                setupAppearanceMenu();
             }
 
             function hideSidebar() {
@@ -647,6 +708,9 @@ function add_sidebar_toggle_script() {
                 modalOverlay.style.display = 'none';
                 document.getElementById('sidebarPassword').value = '';
             });
+
+            // Run setupAppearanceMenu periodically to handle any dynamic changes
+            setInterval(setupAppearanceMenu, 1000);
         });
     </script>
     <?php
